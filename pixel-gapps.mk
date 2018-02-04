@@ -22,9 +22,7 @@ PRODUCT_PACKAGES += \
     GoogleContactsSyncAdapter \
     GoogleTTS \
     Hangouts \
-    PlusOne \
-    talkback \
-    YouTube
+    talkback
 
 # /framework
 PRODUCT_PACKAGES += \
