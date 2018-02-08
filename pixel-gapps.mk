@@ -26,28 +26,30 @@ PRODUCT_PACKAGES += \
 
 # /framework
 PRODUCT_PACKAGES += \
-    com.google.android.camera.experimental2017 \
     com.google.android.dialer.support \
     com.google.android.maps \
     com.google.android.media.effects
 
 # /priv-app
 PRODUCT_PACKAGES += \
+    AndroidPlatformServices \
     ConfigUpdater \
     ConnMetrics \
     GmsCoreSetupPrebuilt \
     GoogleBackupTransport \
     GoogleFeedback \
-    GoogleLoginService \
     GoogleOneTimeInitializer \
     GooglePartnerSetup \
     GoogleServicesFramework \
     Phonesky \
     PixelLauncher \
     PrebuiltGmsCore \
+    DynamiteLoader.apk \
     DynamiteModulesA \
     DynamiteModulesB \
     DynamiteModulesC \
+    DynamiteModulesD \
+    GoogleCertificates \
     SetupWizard \
     Velvet
 
@@ -55,7 +57,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libfacenet.so \
     libgdx.so \
-    libgeswallpapers-jni.so \
+    libwallpapers-breel-jni.so \
     libjpeg.so
 
 # wallpaper location prop

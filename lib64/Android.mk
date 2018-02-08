@@ -46,11 +46,11 @@ $(LOCAL_BUILT_MODULE):
 	$(hide) touch $@
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libgeswallpapers-jni.so
+LOCAL_MODULE := libwallpapers-breel-jni.so
 LOCAL_MODULE_CLASS := FAKE
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SYSTEM)/base_rules.mk
-$(LOCAL_BUILT_MODULE): TARGET := /lib64/libgeswallpapers-jni.so
+$(LOCAL_BUILT_MODULE): TARGET := /lib64/libwallpapers-breel-jni.so
 $(LOCAL_BUILT_MODULE): SYMLINK := $(TARGET_OUT)/app/WallpapersBReel/lib/arm64/$(LOCAL_MODULE)
 $(LOCAL_BUILT_MODULE):
 	$(hide) echo "Symlink: $(SYMLINK) -> $(TARGET)"
