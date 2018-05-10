@@ -32,7 +32,7 @@ PRODUCT_PACKAGES += \
 
 # /priv-app
 PRODUCT_PACKAGES += \
-    AndroidPlatformServices \
+#    AndroidPlatformServices \
     AndroidMigratePrebuilt \
     ConfigUpdater \
     ConnMetrics \
