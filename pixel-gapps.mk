@@ -33,6 +33,7 @@ PRODUCT_PACKAGES += \
 # /priv-app
 PRODUCT_PACKAGES += \
     AndroidPlatformServices \
+    AndroidMigratePrebuilt \
     ConfigUpdater \
     ConnMetrics \
     GmsCoreSetupPrebuilt \

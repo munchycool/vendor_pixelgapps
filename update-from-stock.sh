@@ -16,14 +16,6 @@ for a in $apps; do
 done;
 cd ../priv-app;
 
-#explicitly copy PrebuiltGmsCorePix to PrebuiltGmsCore. 
-#For Pixel devices PrebuiltGmsCore is named as PrebuiltGmsCorePix in factory image - Thx Fred (fhem)
-rm -rf PrebuiltGmsCore
-cp -r $src/system/priv-app/PrebuiltGmsCorePix PrebuiltGmsCore
-cd PrebuiltGmsCore
-mv PrebuiltGmsCorePix.apk PrebuiltGmsCore.apk
-cd ..
-
 for p in $privs; do
     if [[ "$p" != "Android.mk" ]]; then
     cp -R $src/system/priv-app/"$p" .;
@@ -33,7 +25,7 @@ done;
 cd ../framework;
 for f in $fws; do
     if [[ "$f" != "Android.mk" ]]; then
-    cp -R ~$src/system/framework/"$f" .;
+    cp -R $src/system/framework/"$f" .;
     fi;
 done;
 cd ../lib;
@@ -48,3 +40,12 @@ for l64 in $lib64s; do
     cp -R $src/system/lib64/"$l64" .;
     fi;
 done;
+
+cd ../priv-app;
+
+#explicitly copy PrebuiltGmsCorePix to PrebuiltGmsCore. 
+#For Pixel devices PrebuiltGmsCore is named as PrebuiltGmsCorePix in factory image - Thx Fred (fhem)
+rm -rf PrebuiltGmsCore
+cp -r $src/system/priv-app/PrebuiltGmsCorePix PrebuiltGmsCore
+cd PrebuiltGmsCore
+mv PrebuiltGmsCorePix.apk PrebuiltGmsCore.apk
