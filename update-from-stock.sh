@@ -15,9 +15,15 @@ for a in $apps; do
     fi;
 done;
 cd ../priv-app;
+
 #explicitly copy PrebuiltGmsCorePix to PrebuiltGmsCore. 
 #For Pixel devices PrebuiltGmsCore is named as PrebuiltGmsCorePix in factory image - Thx Fred (fhem)
+rm -rf PrebuiltGmsCore
 cp -r $src/system/priv-app/PrebuiltGmsCorePix PrebuiltGmsCore
+cd PrebuiltGmsCore
+mv PrebuiltGmsCorePix.apk PrebuiltGmsCore.apk
+cd ..
+
 for p in $privs; do
     if [[ "$p" != "Android.mk" ]]; then
     cp -R $src/system/priv-app/"$p" .;
