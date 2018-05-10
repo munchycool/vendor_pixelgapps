@@ -32,7 +32,7 @@ for l in $libs; do
     fi;
 done;
 cd ../lib64;
-or l64 in $lib64s; do
+for l64 in $lib64s; do
     if [[ "$l64" != "Android.mk" ]]; then
     cp -R $src/system/lib64/"$l64" .;
     fi;
