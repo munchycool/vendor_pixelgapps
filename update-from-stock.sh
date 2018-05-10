@@ -1,10 +1,12 @@
 #/bin/sh
+
 apps="$(ls app/)"
 privs="$(ls priv-app/)"
 fws="$(ls framework/)"
 libs="$(ls lib/)"
 lib64s="$(ls lib64/)"
 src=$1
+
 cd app;
 for a in $apps; do
     if [[ "$a" != "Android.mk" ]]; then
@@ -13,6 +15,9 @@ for a in $apps; do
     fi;
 done;
 cd ../priv-app;
+#explicitly copy PrebuiltGmsCorePix to PrebuiltGmsCore. 
+#For Pixel devices PrebuiltGmsCore is named as PrebuiltGmsCorePix in factory image - Thx Fred (fhem)
+cp -r $src/system/priv-app/PrebuiltGmsCorePix PrebuiltGmsCore
 for p in $privs; do
     if [[ "$p" != "Android.mk" ]]; then
     cp -R $src/system/priv-app/"$p" .;
