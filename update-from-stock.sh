@@ -49,3 +49,10 @@ rm -rf PrebuiltGmsCore
 cp -r $src/system/priv-app/PrebuiltGmsCorePix PrebuiltGmsCore
 cd PrebuiltGmsCore
 mv PrebuiltGmsCorePix.apk PrebuiltGmsCore.apk
+
+#process Facelock libfacenet.so - copying this file from /app results in a symlink which causes compile errors
+#we will remove the symlink and copy it from original source
+cd ../app/FaceLock/lib/arm64;
+unlink libfacenet.so
+cp $src/system/lib64/libfacenet.so .
+
