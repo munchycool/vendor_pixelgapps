@@ -22,7 +22,9 @@ PRODUCT_PACKAGES += \
     GoogleContactsSyncAdapter \
     GoogleTTS \
     Hangouts \
-    talkback
+    talkback \
+    GoogleVrCore \
+    Ornament
 
 # /framework
 PRODUCT_PACKAGES += \

@@ -16,6 +16,7 @@ PRODUCT_COPY_FILES += \
     vendor/pixelgapps/etc/permissions/com.google.android.dialer.support.xml:system/etc/permissions/com.google.android.dialer.support.xml \
     vendor/pixelgapps/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
     vendor/pixelgapps/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
+    vendor/pixelgapps/etc/permissions/com.google.vr.platform.xml:system/etc/permissions/com.google.vr.platform.xml \
     vendor/pixelgapps/etc/preferred-apps/google.xml:system/etc/preferred-apps/google.xml \
     vendor/pixelgapps/etc/sysconfig/google.xml:system/etc/sysconfig/google.xml \
     vendor/pixelgapps/etc/sysconfig/google_build.xml:system/etc/sysconfig/google_build.xml \
@@ -30,6 +31,7 @@ PRODUCT_COPY_FILES += \
     vendor/pixelgapps/lib64/libgdx.so:system/lib64/libgdx.so \
     vendor/pixelgapps/lib64/libwallpapers-breel-jni.so:system/lib64/libwallpapers-breel-jni.so \
     vendor/pixelgapps/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
+    vendor/pixelgapps/lib64/libvr_hwc-hal.so:system/lib64/libvr_hwc-hal.so \
     vendor/pixelgapps/app/GoogleCamera/GoogleCamera.apk.prof:system/app/GoogleCamera/GoogleCamera.apk.prof \
     vendor/pixelgapps/usr/srec/en-US/APP_NAME.fst:system/usr/srec/en-US/APP_NAME.fst \
     vendor/pixelgapps/usr/srec/en-US/APP_NAME.syms:system/usr/srec/en-US/APP_NAME.syms \
