@@ -25,6 +25,8 @@ PRODUCT_COPY_FILES += \
     vendor/pixelgapps/etc/sysconfig/whitelist_com.android.omadm.service.xml:system/etc/sysconfig/whitelist_com.android.omadm.service.xml \
     vendor/pixelgapps/lib/libfilterpack_facedetect.so:system/lib/libfilterpack_facedetect.so \
     vendor/pixelgapps/lib/libfrsdk.so:system/lib/libfrsdk.so \
+    vendor/pixelgapps/lib/libdvr_loader.so:system/lib/libdvr_loader.so \
+    vendor/pixelgapps/lib/libdvr.so:system/lib/libdvr.so \
     vendor/pixelgapps/lib64/libfrsdk.so:system/lib64/libfrsdk.so \
     vendor/pixelgapps/lib64/libfacenet.so:system/lib64/libfacenet.so \
     vendor/pixelgapps/lib64/libfilterpack_facedetect.so:system/lib64/libfilterpack_facedetect.so \
@@ -32,6 +34,8 @@ PRODUCT_COPY_FILES += \
     vendor/pixelgapps/lib64/libwallpapers-breel-jni.so:system/lib64/libwallpapers-breel-jni.so \
     vendor/pixelgapps/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
     vendor/pixelgapps/lib64/libvr_hwc-hal.so:system/lib64/libvr_hwc-hal.so \
+    vendor/pixelgapps/lib64/libdvr_loader.so:system/lib64/libdvr_loader.so \
+    vendor/pixelgapps/lib64/libdvr.so:system/lib64/libdvr.so \
     vendor/pixelgapps/app/GoogleCamera/GoogleCamera.apk.prof:system/app/GoogleCamera/GoogleCamera.apk.prof \
     vendor/pixelgapps/usr/srec/en-US/APP_NAME.fst:system/usr/srec/en-US/APP_NAME.fst \
     vendor/pixelgapps/usr/srec/en-US/APP_NAME.syms:system/usr/srec/en-US/APP_NAME.syms \
