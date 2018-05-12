@@ -30,7 +30,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.google.android.dialer.support \
     com.google.android.maps \
-    com.google.android.media.effects
+    com.google.android.media.effects \
+    com.google.vr.platform
 
 # /priv-app
 PRODUCT_PACKAGES += \
