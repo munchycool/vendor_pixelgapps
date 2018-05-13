@@ -5,6 +5,9 @@ privs="$(ls priv-app/)"
 fws="$(ls framework/)"
 libs="$(ls lib/)"
 lib64s="$(ls lib64/)"
+epermissions="$(ls etc/permissions/)"
+epapps="$(ls etc/preferred-apps/)"
+esysconfig="$(ls etc/sysconfig/)"
 src=$1
 
 cd app;
@@ -40,8 +43,27 @@ for l64 in $lib64s; do
     cp -R $src/system/lib64/"$l64" .;
     fi;
 done;
+cd ../etc;
+cd permissions;
+for permis in $epermissions; do
+    if [[ "$permis" != "Android.mk" ]]; then
+    cp -R $src/system/etc/permissions/"$permis" .;
+    fi;
+done;
+cd ../preferred-apps;
+for papps in $epapps; do
+    if [[ "$papps" != "Android.mk" ]]; then
+    cp -R $src/system/etc/preferred-apps/"$papps" .;
+    fi;
+done;
+cd ../sysconfig	;
+for scon in $esysconfig; do
+    if [[ "$scon" != "Android.mk" ]]; then
+    cp -R $src/system/etc/sysconfig/"$scon" .;
+    fi;
+done;
 
-cd ../priv-app;
+cd ../../priv-app;
 
 #explicitly copy PrebuiltGmsCorePix to PrebuiltGmsCore. 
 #For Pixel devices PrebuiltGmsCore is named as PrebuiltGmsCorePix in factory image - Thx Fred (fhem)
@@ -52,7 +74,7 @@ mv PrebuiltGmsCorePix.apk PrebuiltGmsCore.apk
 
 #process Facelock libfacenet.so - copying this file from /app results in a symlink which causes compile errors
 #we will remove the symlink and copy it from original source
-cd ../app/FaceLock/lib/arm64;
+cd ../../app/FaceLock/lib/arm64;
 unlink libfacenet.so
 cp $src/system/lib64/libfacenet.so .
 
